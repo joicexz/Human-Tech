@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: red; */
+    grid-template-areas: "section1" "section2" "section3";
+    grid-template-rows: auto auto auto;
+    display: grid;
+}
+
+.section1 {
+    grid-area: section1;
+    width: 100%;
+    height: 100vh;
+    /* background-color: aqua; */
+    grid-template-areas: "nav" "intro";
+    grid-template-rows: 150px 1fr;
+    display: grid;
+    background-image: url(/img/background.png);
+}
+
+nav {
+    grid-area: nav;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(204, 162, 23); */
+    grid-template-areas: "container-logo pages";
+    grid-template-rows: 1fr 80px;
+    display: grid;
+}
+
+.container-logo {
+    grid-area: container-logo;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(127, 17, 161); */
+}
+
+.logo {
+    width: 150px;
+}
+
+.pages {
+    grid-area: pages;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(161, 161, 17); */
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.pages a {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-family: "Alexandria", sans-serif;
+    text-decoration: none;
+}
+
+.pages a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: #05347C;
+    transition: width 0.3s ease-out;
+}
+
+.pages a:hover::after {
+    width: 100%;
+    left: 0;
+    right: unset;
+}
+
+.intro {
+    grid-area: intro;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 45px;
+    flex-direction: column;
+    font-family: "Alexandria", sans-serif;
+    /* background-color: rgb(161, 17, 75); */
+}
+
+.intro div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro span{
+    margin: 10px;
+}
+
+.intro p{
+    width: 70%;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+.section2 {
+    grid-area: section2;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(62, 9, 152); */
+}
+
+.section3 {
+    grid-area: section3;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(91, 152, 15); */
+}
