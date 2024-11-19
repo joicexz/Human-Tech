@@ -13,7 +13,14 @@ a {
 body {
     width: 100vw;
     height: 100vh;
-    /* background-color: red; */
+    overflow-x: hidden;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom right, #000000, #010128);
     grid-template-areas: "section1" "section2" "section3";
     grid-template-rows: auto auto auto;
     display: grid;
@@ -23,7 +30,6 @@ body {
     grid-area: section1;
     width: 100%;
     height: 100vh;
-    /* background-color: aqua; */
     grid-template-areas: "nav" "intro";
     grid-template-rows: 150px 1fr;
     display: grid;
@@ -34,7 +40,6 @@ nav {
     grid-area: nav;
     width: 100%;
     height: 100%;
-    /* background-color: rgb(204, 162, 23); */
     grid-template-areas: "container-logo pages";
     grid-template-rows: 1fr 80px;
     display: grid;
@@ -44,7 +49,6 @@ nav {
     grid-area: container-logo;
     width: 100%;
     height: 100%;
-    /* background-color: rgb(127, 17, 161); */
 }
 
 .logo {
@@ -55,7 +59,6 @@ nav {
     grid-area: pages;
     width: 100%;
     height: 100%;
-    /* background-color: rgb(161, 161, 17); */
     display: flex;
     font-size: 20px;
     justify-content: center;
@@ -99,45 +102,150 @@ nav {
     gap: 45px;
     flex-direction: column;
     font-family: "Alexandria", sans-serif;
-    /* background-color: rgb(161, 17, 75); */
 }
 
-.intro div{
+.intro div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.intro span{
+.intro span {
     margin: 10px;
 }
 
-.intro p{
+.intro p {
     width: 70%;
     font-size: 20px;
     text-align: justify;
     letter-spacing: 2px;
 }
 
-
-
-
-
-
-
-
-
-
 .section2 {
     grid-area: section2;
     width: 100%;
     height: 100%;
-    /* background-color: rgb(62, 9, 152); */
+    grid-template-areas: "tittle cards";
+    grid-template-rows: 250px 1fr;
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    gap: 20%;
+}
+
+.tittle {
+    grid-area: tittle;
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Alexandria", sans-serif;
+    color: white;
+    text-shadow: 0px -15px #071428;
+    font-size: 55px;
+}
+
+.cards {
+    grid-area: cards;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    width: 300px;
+    height: 230px;
+    border-radius: 10px;
+    background-color: #0E2242;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    font-family: "Alexandria", sans-serif;
+}
+
+.card a,
+.card a:hover {
+    color: white;
 }
 
 .section3 {
     grid-area: section3;
     width: 100%;
     height: 100%;
-    /* background-color: rgb(91, 152, 15); */
+    grid-template-areas: "tittle container-cards";
+    grid-template-rows: 250px 1fr;
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+}
+
+.tittle {
+    grid-area: tittle;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Alexandria", sans-serif;
+    color: white;
+    text-shadow: 0px -15px #071428;
+    font-size: 55px;
+}
+
+.container-cards {
+    grid-area: container-cards;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-bottom: 100px;
+}
+
+.item {
+    color: #fff;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.item img {
+    width: 400px;
+    height: 680px;
+    border-radius: 15px;
+    display: flex;
+}
+
+.item::before {
+    content: attr(data-text);
+    width: 400px;
+    height: 700px;
+    display: block;
+    background-color: #0008;
+    position: absolute;
+    font-family: "Alexandria", sans-serif;
+    display: grid;
+    place-content: center;
+    letter-spacing: 3px;
+    transform: translateY(140%);
+    transition: transform .5s;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.item:hover::before {
+    transform: translateY(0%);
 }
