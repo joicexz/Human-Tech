@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, #000000, #010128);
+    grid-template-areas: "nav" "main";
+    grid-template-rows: 150px auto;
+    display: grid;
+}
+
+nav {
+    grid-area: nav;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "container-logo pages";
+    grid-template-columns: 1fr 800px;
+    display: grid;
+}
+
+.container-logo {
+    grid-area: container-logo;
+    width: 100%;
+    height: 100%;
+    padding-left: 45px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.pages {
+    grid-area: pages;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.pages a {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-family: "Alexandria", sans-serif;
+    text-decoration: none;
+}
+
+.pages a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: #05347C;
+    transition: width 0.3s ease-out;
+}
+
+.pages a:hover::after {
+    width: 100%;
+    left: 0;
+    right: unset;
+}
+
+.main {
+    grid-area: main;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 120px;
+    grid-template-areas: "tittle" "container-cards";
+    grid-template-rows: 150px auto;
+}
+
+.tittle {
+    grid-area: tittle;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 45px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Alexandria", sans-serif;
+    color: white;
+    text-shadow: 0px -15px #071428;
+    font-size: 55px;
+}
+
+.container-cards {
+    grid-area: container-cards;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 100px;
+    grid-template-areas: "file1" "file2" "file3";
+    grid-template-rows: auto auto auto;
+}
+
+.file1 {
+    grid-area: file1;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    gap: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file2 {
+    grid-area: file2;
+    width: 100%;
+    gap: 150px;
+    height: 100%;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file3 {
+    grid-area: file3;
+    width: 100%;
+    gap: 150px;
+    height: 100%;
+    display: flex;
+    margin-bottom: 180px;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto img {
+    width: 450px;
+}
+
+.intro {
+    width: 600px;
+    border: 5px #010128 solid;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.intro p {
+    width: 500px;
+    color: white;
+    font-family: "Alexandria", sans-serif;
+    font-size: 25px;
+}
