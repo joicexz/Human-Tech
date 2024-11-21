@@ -104,62 +104,57 @@ nav {
     grid-area: container-cards;
     width: 100%;
     height: 100%;
-    display: grid;
-    gap: 100px;
-    grid-template-areas: "file1" "file2" "file3";
-    grid-template-rows: auto auto auto;
+    margin-bottom: 100px;
 }
 
-.file1 {
-    grid-area: file1;
+.accordion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
     width: 100%;
-    height: 100%;
-    margin: 20px;
-    gap: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-bottom: 1px solid #333;
 }
 
-.file2 {
-    grid-area: file2;
+.accordion-header {
+    display: flex;
     width: 100%;
-    gap: 150px;
-    height: 100%;
-    margin: 30px;
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-}
-
-.file3 {
-    grid-area: file3;
-    width: 100%;
-    gap: 150px;
-    height: 100%;
-    display: flex;
-    margin-bottom: 180px;
-    justify-content: center;
-    align-items: center;
-}
-
-.foto img {
-    width: 450px;
-}
-
-.intro {
-    width: 600px;
-    border: 5px #010128 solid;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-}
-
-.intro p {
-    width: 500px;
-    color: white;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: left;
     font-family: "Alexandria", sans-serif;
-    font-size: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-header .arrow {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    font-family: "Alexandria", sans-serif;
+    background-color: transparent;
+    color: #ddd;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content p {
+    margin: 10px 0;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
