@@ -209,6 +209,7 @@ nav {
 .card a,
 .card a:hover {
     color: white;
+    z-index: 1;
 }
 
 .section3 {
