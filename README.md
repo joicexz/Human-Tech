@@ -1,5 +1,5 @@
 # Human-Tech - Documentação
-<hr>
+
 # Descrição do projeto
 O Humantech nasceu da ideia de projetar um futuro mais acessível e inclusivo. Com o avanço das tecnologias assistivas, como próteses biônicas, interfaces cérebro-computador e exoesqueletos robóticos, surgem novas oportunidades para melhorar a qualidade de vida de pessoas com deficiências físicas e cognitivas.
 
