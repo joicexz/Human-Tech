@@ -160,18 +160,20 @@ nav {
 }
 
 .card {
-    position: relative;
-    width: 300px;
-    height: 230px;
-    border-radius: 10px;
-    background-color: #0E2242;
-    color: white;
     display: flex;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    color: #dddcec;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    padding: 25px;
+    border-radius: 30px;
+    padding: 50px 30px;
+    text-align: justify;
     font-family: "Alexandria", sans-serif;
+    background-color: rgba(255, 255, 255, .01);
+    box-shadow: inset 0 39px 56px -56px rgba(255, 255, 255, .25), inset 0 7px 21px rgba(255, 255, 255, .2), inset 0 -82px 68px rgba(96, 68, 144, .18), inset 0 -98px 100px -108px rgba(202, 172, 255, .1), inset 0 4px 18px rgba(154, 146, 210, .15), inset 0 1px 40px rgba(227, 222, 255, .15);
     transition: transform 0.3s ease;
     overflow: hidden;
 }
@@ -248,19 +250,23 @@ nav {
     align-items: flex-start;
     align-content: flex-start;
     margin-bottom: 100px;
+    
 }
 
 .item {
     color: #fff;
-    border-radius: 15px;
     position: relative;
     overflow: hidden;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    border-image: linear-gradient(90deg, #3E2F8D 21%, #281E5A 54%, #063782 100%);
+    border-image-slice: 1;
 }
 
 .item img {
+    border-radius: 15px;
     width: 400px;
     height: 680px;
-    border-radius: 15px;
     display: flex;
 }
 
@@ -284,3 +290,9 @@ nav {
 .item:hover::before {
     transform: translateY(0%);
 }
+
+
+
+
+
+  
