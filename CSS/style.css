@@ -90,7 +90,7 @@ nav {
     font-size: 80px;
     font-weight: bolder;
     filter: drop-shadow(10px 2px 5px #030335);
-    background: linear-gradient(90deg, #3E2F8D 21%, #281E5A 54%, #063782 100%);
+    background: linear-gradient(90deg, #063782 20%, #0A5FE2 38%, #32349A 53%, #3E2F8D 88%);
     background-clip: text;
     font-family: "Alexandria", sans-serif;
 }
