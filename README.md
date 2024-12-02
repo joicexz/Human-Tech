@@ -42,3 +42,5 @@ Os conteúdos do **Humantech** são baseados em **pesquisas confiáveis**, garan
 1. 🌐 **Sites especializados**: Portais dedicados à divulgação científica e tecnológica.  
 2. 📑 **Publicações acadêmicas**: Estudos e artigos publicados.  
 3. 🏢 **Organizações**: Instituições e empresas que desenvolvem tecnologias assistivas.
+
+canva: https://www.canva.com/design/DAGYD3pcUGg/rilhqxaNj4Y5drbgxaoCDQ/view?utm_content=DAGYD3pcUGg&utm_campaign=designshare&utm_medium=link&utm_source=editor
